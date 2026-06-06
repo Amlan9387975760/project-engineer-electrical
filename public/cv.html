@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Amlan Kashyap — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--txt:#eef3fa;--muted:#aebbcf;--cyan:#22d3ee;--teal:#2dd4bf;--lime:#a3e635;
+        --glass:rgba(12,17,28,.62);--glass-line:rgba(255,255,255,.12)}
+  *{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{margin:0;padding:0;background:#070b12}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--txt)}
+  @page{size:A4;margin:0}
+  /* fixed background — Chrome repaints it on every printed page */
+  .bg-photo{position:fixed;inset:0;background:url("bg.png") center/cover no-repeat;z-index:-2}
+  .bg-overlay{position:fixed;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(4,7,12,.55) 0%,rgba(4,7,12,.34) 30%,rgba(4,7,12,.58) 72%,rgba(4,7,12,.84) 100%),
+               linear-gradient(90deg,rgba(4,7,12,.74) 0%,rgba(4,7,12,.26) 55%,rgba(4,7,12,.52) 100%)}
+  .page{width:210mm;padding:13mm 15mm;position:relative}
+  .page.first{break-after:page;page-break-after:always}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0;letter-spacing:-.01em}
+  .glass{background:var(--glass);border:1px solid var(--glass-line);border-radius:12px}
+  .chip{display:inline-block;padding:5px 12px;border:1px solid var(--glass-line);border-radius:999px;background:rgba(255,255,255,.05);font-size:11px;margin:4px 5px 0 0}
+
+  .top{display:flex;gap:20px;align-items:center}
+  .ring{padding:3px;border-radius:999px;background:linear-gradient(135deg,var(--cyan),var(--teal),var(--lime));flex:none}
+  .ph{width:96px;height:96px;border-radius:999px;object-fit:cover;display:block}
+  h1.name{font-size:44px;line-height:1;text-transform:uppercase;font-weight:700}
+  h1.name .ln{background:linear-gradient(90deg,#fff 0%,#fff 28%,#7cc2f2 60%,#1f88d6 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .title{font-family:'Space Grotesk';font-size:16px;color:#dbe6f3;margin-top:8px}
+  .role{font-size:14px;color:var(--cyan);margin-top:5px}
+  .contact{margin-top:18px;display:flex;gap:24px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+  .contact b{color:#fff;font-weight:600}
+  .lic{margin-top:16px;padding:14px 18px;font-size:14px}
+  .lic b{color:var(--lime)}
+
+  .sec{margin-top:15px}
+  .sec .k{font-family:'Space Grotesk';font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--cyan)}
+  .sec h2{font-size:18px;margin-top:4px;margin-bottom:10px}
+  .card{padding:13px 17px;margin-bottom:10px}
+  .card h3{font-size:15px;color:#fff}
+  .card .co{font-size:12.5px;color:var(--cyan);margin-top:3px}
+  .card .sum{font-size:12.5px;color:#c9d4e3;margin-top:7px;line-height:1.55}
+  .card ul{margin:8px 0 0;padding-left:0;list-style:none}
+  .card li{font-size:12px;color:#c2cdde;line-height:1.5;display:flex;gap:8px;margin-top:5px}
+  .card li .b{color:var(--lime)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .ec h3{font-size:14.5px;color:#fff}.ec .sch{font-size:13px;color:var(--cyan);margin-top:4px}
+  .ec .meta{font-size:12px;color:var(--muted);margin-top:8px}
+  .ec .gr{color:var(--lime);font-weight:600}
+  .pagefoot{position:fixed;bottom:9mm;left:16mm;right:16mm;display:flex;justify-content:space-between;font-size:11px;color:var(--muted);z-index:1}
+</style>
+</head>
+<body>
+  <div class="bg-photo"></div>
+  <div class="bg-overlay"></div>
+  <div class="pagefoot"><span>Amlan Kashyap · Electrical Project Engineer</span><span>+91 93879 75760 · amlanrickyaec77@gmail.com</span></div>
+
+  <!-- PAGE 1 -->
+  <div class="page first">
+    <div class="top">
+      <div class="ring"><img class="ph" src="profile.png" alt=""></div>
+      <div>
+        <h1 class="name"><span class="ln">Amlan Kashyap</span></h1>
+        <div class="title">Project Engineer — Electrical Transmission &amp; Substation Projects</div>
+        <div class="role">Electrical Engineer · B.E (Electrical Eng) · M.Tech (Electrical Power Systems)</div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <span>📞 <b>+91 93879 75760</b></span>
+      <span>✉ <b>amlanrickyaec77@gmail.com</b></span>
+      <span>📍 <b>Guwahati, Assam</b></span>
+    </div>
+
+    <div class="glass lic"><b>Electrical Supervisory License holder (HT, 33 kV)</b></div>
+
+    <div class="sec">
+      <div class="k">Profile</div><h2>Summary</h2>
+      <div class="glass card">
+        <div class="sum">Electrical project engineer with hands-on execution and procurement experience across 132 kV substations and transmission lines for AEGCL, APDCL, BHEL &amp; NTPC. Backed by an M.Tech in Power Systems (1st Class with Honours) and a published international research paper.</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="k">Experience</div><h2>Work Experience</h2>
+      <div class="glass card">
+        <h3>Lead Project Manager — Execution &amp; Procurement</h3>
+        <div class="co">Mega Electricals · Full-time</div>
+        <div class="sum">Project manager for the complete execution and monitoring of AEGCL and APDCL transmission and substation projects.</div>
+        <ul>
+          <li><span class="b">▹</span> Construction of a new 132 kV bay extension at the 132/33 kV Barnagar Grid Substation (AEGCL).</li>
+          <li><span class="b">▹</span> Construction of a 132 kV single-circuit line on D/C towers connecting Barnagar Grid S/S to Sorbhog S/S (AEGCL).</li>
+          <li><span class="b">▹</span> Integrated Power Development Scheme (IPDS) — Karbi Anglong &amp; Hamren (APDCL).</li>
+        </ul>
+        <div><span class="chip">AEGCL</span><span class="chip">APDCL</span><span class="chip">132 kV Bay Extension</span><span class="chip">D/C Transmission Line</span><span class="chip">IPDS</span></div>
+      </div>
+      <div class="glass card">
+        <h3>Project Engineer — Operations, Execution &amp; Procurement</h3>
+        <div class="co">N.K. Engineering Works · Full-time</div>
+        <div class="sum">Owned tender intelligence, bid submission and end-to-end project support across APDCL, BHEL and NTPC projects — from vendor approval to project closure.</div>
+        <ul>
+          <li><span class="b">▹</span> Explored tender notifications; arranged vendor-approval documents and prepared / submitted bids with clients.</li>
+          <li><span class="b">▹</span> Circulated Work Orders, Scope of Work, TCC, GCC &amp; SCC to project teams and stakeholders.</li>
+          <li><span class="b">▹</span> Procured materials per scope &amp; approved specifications; ensured resource availability.</li>
+          <li><span class="b">▹</span> Single point of contact for working groups; managed escalation, billing &amp; timely project closure.</li>
+        </ul>
+        <div><span class="chip">APDCL</span><span class="chip">BHEL</span><span class="chip">NTPC</span><span class="chip">Tender / Bid Management</span><span class="chip">Procurement</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <div class="sec" style="margin-top:0">
+      <div class="k">Education</div><h2>Academic Foundation</h2>
+      <div class="grid2">
+        <div class="glass card ec">
+          <h3>M.Tech — Electrical Engineering (Power Systems)</h3>
+          <div class="sch">Assam Engineering College (AEC)</div>
+          <div class="meta">2021 – 2023 · <span class="gr">78.47% · 1st Class with Honours</span></div>
+        </div>
+        <div class="glass card ec">
+          <h3>B.E — Electrical Engineering</h3>
+          <div class="sch">Assam Engineering College (AEC)</div>
+          <div class="meta">2011 – 2015 · <span class="gr">66.24% · 1st Class</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="k">Projects</div><h2>Academic Project</h2>
+      <div class="glass card">
+        <h3>Power Quality Assessment using Wavelet Transform &amp; a Substation Reliability Case Study</h3>
+        <div class="co">Final-year project · Assam Engineering College</div>
+        <ul>
+          <li><span class="b">▹</span> <b style="color:#fff">7th Sem:</b>&nbsp; Study of power-quality disturbances using MATLAB; analysis using DWT &amp; DT-DWT.</li>
+          <li><span class="b">▹</span> <b style="color:#fff">8th Sem:</b>&nbsp; Neural network to classify disturbances; reliability case study of 33/11 kV Ulubari S/S (APDCL).</li>
+        </ul>
+        <div><span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">Neural Networks</span><span class="chip">Wavelet Transform</span></div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="k">Research</div><h2>Published Paper</h2>
+      <div class="glass card">
+        <h3>An Improved Control Strategy for Reactive-Power Compensation &amp; Voltage Regulation in Modern Distribution Networks</h3>
+        <div class="co">International Journal · Peer-reviewed</div>
+        <div class="sum">Advanced controller design for power-factor correction and demand-side management on the load side, benchmarked against a conventional smart-grid compensation approach.</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="k">Skills</div><h2>Capabilities</h2>
+      <div class="glass card">
+        <div>
+          <span class="chip">Project Execution &amp; Monitoring</span><span class="chip">Procurement &amp; Vendor Management</span><span class="chip">Tender / Bid Management</span>
+          <span class="chip">Contract Docs (TCC / GCC / SCC)</span><span class="chip">132 kV Substation &amp; Bay Extension</span><span class="chip">Transmission Line Construction (D/C)</span>
+          <span class="chip">IPDS Implementation</span><span class="chip">Power Quality Analysis (DWT)</span><span class="chip">MATLAB</span><span class="chip">Simulink</span>
+          <span class="chip">Neural Networks</span><span class="chip">AEGCL / APDCL / BHEL / NTPC Standards</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

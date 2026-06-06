@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#241a33"/>
+      <stop offset="34%" stop-color="#5b2f3e"/>
+      <stop offset="58%" stop-color="#9c4a2a"/>
+      <stop offset="74%" stop-color="#d97a2b"/>
+      <stop offset="86%" stop-color="#f6a83c"/>
+      <stop offset="100%" stop-color="#1a0f0a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#fff3d0"/>
+      <stop offset="22%" stop-color="#ffd884"/>
+      <stop offset="55%" stop-color="#ff9d3c" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff9d3c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0f0a"/>
+      <stop offset="100%" stop-color="#050304"/>
+    </linearGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb05a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffb05a" stop-opacity="0.30"/>
+    </linearGradient>
+
+    <!-- Lattice transmission tower (local 200 wide x 540 tall, ground at y=540) -->
+    <g id="tower">
+      <g stroke="#070506" stroke-width="3" fill="none" stroke-linecap="round">
+        <!-- outer legs -->
+        <path d="M30 540 L86 250"/>
+        <path d="M170 540 L114 250"/>
+        <!-- inner legs -->
+        <path d="M64 540 L90 250"/>
+        <path d="M136 540 L110 250"/>
+        <!-- horizontal belts (legs) -->
+        <path d="M30 540 L170 540"/>
+        <path d="M44 470 L156 470"/>
+        <path d="M58 400 L142 400"/>
+        <path d="M70 330 L130 330"/>
+        <path d="M86 250 L114 250"/>
+        <!-- leg X-bracing -->
+        <path d="M30 540 L156 470 M170 540 L44 470"/>
+        <path d="M44 470 L142 400 M156 470 L58 400"/>
+        <path d="M58 400 L130 330 M142 400 L70 330"/>
+        <path d="M70 330 L114 250 M130 330 L86 250"/>
+        <!-- body -->
+        <path d="M86 250 L86 96 M114 250 L114 96"/>
+        <path d="M86 250 L114 210 M114 250 L86 210"/>
+        <path d="M86 210 L114 170 M114 210 L86 170"/>
+        <path d="M86 170 L114 130 M114 170 L86 130"/>
+        <path d="M86 130 L114 96 M114 130 L86 96"/>
+        <path d="M80 210 L120 210 M80 170 L120 170 M80 130 L120 130"/>
+        <!-- cross arms (3 tiers, drooping) -->
+        <path d="M86 196 L20 214 M114 196 L180 214"/>
+        <path d="M86 178 L20 214 M114 178 L180 214"/>
+        <path d="M20 214 L34 214 M180 214 L166 214"/>
+        <path d="M86 150 L8 168 M114 150 L192 168"/>
+        <path d="M86 132 L8 168 M114 132 L192 168"/>
+        <path d="M86 108 L26 124 M114 108 L174 124"/>
+        <path d="M86 96 L26 124 M114 96 L174 124"/>
+        <!-- peak / earth-wire pylons -->
+        <path d="M86 96 L100 56 L114 96"/>
+        <path d="M100 56 L100 38"/>
+        <path d="M88 60 L112 60"/>
+      </g>
+      <!-- insulator strings (small) -->
+      <g stroke="#070506" stroke-width="2.5">
+        <path d="M30 214 L30 232 M180 214 L180 232"/>
+        <path d="M16 168 L16 188 M192 168 L192 188"/>
+        <path d="M30 124 L30 142 M174 124 L174 142"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- SKY -->
+  <rect width="2400" height="1350" fill="url(#sky)"/>
+  <!-- sun glow + disc near horizon -->
+  <rect x="700" y="650" width="1100" height="700" fill="url(#sun)"/>
+  <circle cx="1190" cy="1010" r="34" fill="#fff6dc"/>
+  <!-- horizon haze -->
+  <rect x="0" y="900" width="2400" height="190" fill="url(#haze)"/>
+
+  <!-- CONDUCTOR LINES sweeping from the big right tower toward the distance -->
+  <g stroke="#080506" stroke-width="2.2" fill="none" opacity="0.92">
+    <path d="M2010 360 Q1200 760 250 1012"/>
+    <path d="M2030 400 Q1200 800 250 1020"/>
+    <path d="M1995 470 Q1150 820 250 1030"/>
+    <path d="M2050 500 Q1200 860 250 1038"/>
+    <path d="M1980 560 Q1100 880 250 1046"/>
+    <path d="M2065 600 Q1200 920 250 1054"/>
+  </g>
+
+  <!-- GROUND -->
+  <rect x="0" y="1080" width="2400" height="270" fill="url(#ground)"/>
+  <path d="M0 1085 Q1200 1055 2400 1085 L2400 1120 L0 1120 Z" fill="#050304"/>
+
+  <!-- TOWERS: receding line on the left, big tower on the right -->
+  <!-- distant small towers (toward sun) -->
+  <use href="#tower" x="0" y="0" transform="translate(250 985) scale(0.10)"/>
+  <use href="#tower" x="0" y="0" transform="translate(360 968) scale(0.15)"/>
+  <use href="#tower" x="0" y="0" transform="translate(520 945) scale(0.22)"/>
+  <use href="#tower" x="0" y="0" transform="translate(740 905) scale(0.34)"/>
+  <!-- big foreground tower (right) -->
+  <use href="#tower" x="0" y="0" transform="translate(1640 250) scale(1.55)"/>
+</svg>

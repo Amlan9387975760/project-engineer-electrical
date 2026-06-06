@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const groups = [
+  { title: 'Project & Commercial', items: ['Project Execution & Monitoring', 'Procurement & Vendor Management', 'Tender / Bid Management', 'Contract Documentation (TCC / GCC / SCC)', 'Stakeholder Coordination'] },
+  { title: 'Electrical Engineering', items: ['132 kV Substation & Bay Extension', 'Transmission Line Construction (D/C Tower)', 'IPDS Implementation', 'Power Quality Analysis (DWT)', 'AEGCL / APDCL / BHEL / NTPC Standards'] },
+  { title: 'Technical & Analysis', items: ['MATLAB', 'Simulink', 'Neural Networks', 'Wavelet Transform (DWT / DT-DWT)', 'Reliability Studies'] },
+];
+---
+<Layout title="Skills — Amlan Kashyap">
+  <section class="page-head">
+    <div class="wrap">
+      <a class="backlink" href={`${base}/`}>← Back to home</a>
+      <h1>Skills &amp; <span class="gradient-text">Capabilities</span></h1>
+      <p class="sub">From field execution and procurement to power-system analysis and tooling.</p>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:24px">
+    <div class="wrap">
+      <div class="skillgrid">
+        {groups.map((g) => (
+          <div class="glass skillcard">
+            <h3>{g.title}</h3>
+            <div class="tags">{g.items.map((i) => <span class="chip">{i}</span>)}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

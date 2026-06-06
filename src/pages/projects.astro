@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title="Academic Project — Amlan Kashyap">
+  <section class="page-head">
+    <div class="wrap">
+      <a class="backlink" href={`${base}/`}>← Back to home</a>
+      <h1>Academic <span class="gradient-text">Project</span></h1>
+      <p class="sub">Final-year project at Assam Engineering College — power quality and substation reliability.</p>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:24px">
+    <div class="wrap">
+      <div class="glass pcard">
+        <h3>Power Quality Assessment using Wavelet Transform &amp; a Substation Reliability Case Study</h3>
+        <div class="sub">Final-year project · Assam Engineering College</div>
+        <div class="twocol" style="margin-top:18px">
+          <div>
+            <h4>7th Semester</h4>
+            <ul>
+              <li><span class="b">▹</span> Study of different power-quality disturbances using MATLAB.</li>
+              <li><span class="b">▹</span> Power-quality analysis using DWT (Discrete Wavelet Transform) &amp; DT-DWT (Dual-Tree DWT), with results.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>8th Semester</h4>
+            <ul>
+              <li><span class="b">▹</span> Neural network employed to classify the disturbances.</li>
+              <li><span class="b">▹</span> Reliability case study of the 33/11 kV Ulubari distribution substation under APDCL.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tags"><span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">Neural Networks</span><span class="chip">Wavelet Transform</span><span class="chip">Reliability</span></div>
+      </div>
+    </div>
+  </section>
+</Layout>

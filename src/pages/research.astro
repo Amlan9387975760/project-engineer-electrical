@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<Layout title="Research — Amlan Kashyap">
+  <section class="page-head">
+    <div class="wrap">
+      <a class="backlink" href={`${base}/`}>← Back to home</a>
+      <h1>Published <span class="gradient-text">Research</span></h1>
+      <p class="sub">Peer-reviewed work in power-systems control, published in an international journal.</p>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:24px">
+    <div class="wrap">
+      <div class="glass pcard">
+        <span class="chip" style="margin-bottom:14px">International Journal · Peer-reviewed</span>
+        <h3 style="max-width:880px;margin-top:6px">An Improved Control Strategy for Reactive-Power Compensation &amp; Voltage Regulation in Modern Distribution Networks</h3>
+        <p style="max-width:820px">Research on advanced controller design for power-factor correction and demand-side management on the load side, benchmarked against a conventional smart-grid compensation approach. The work demonstrates improved voltage regulation and reactive-power handling for modern distribution networks.</p>
+        <div class="tags"><span class="chip">Power Factor Correction</span><span class="chip">Smart Grid</span><span class="chip">Demand-Side Management</span><span class="chip">Voltage Regulation</span><span class="chip">Reactive Power</span></div>
+      </div>
+    </div>
+  </section>
+</Layout>

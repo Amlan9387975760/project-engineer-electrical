@@ -1,14 +1,13 @@
 ---
 import '../styles/global.css';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const { title = 'Amlan Kashyap — Electrical Project Manager', description = 'Project Manager — Electrical Transmission & Substation Projects. 132 kV substation execution & procurement for AEGCL, APDCL, BHEL and NTPC.' } = Astro.props;
+const { title = 'Amlan Kashyap — Electrical Project Engineer', description = 'Project Engineer — Electrical Transmission & Substation Projects. 132 kV substation & line execution and procurement for AEGCL, APDCL, BHEL and NTPC.' } = Astro.props;
 const nav = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#education', label: 'Education' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#research', label: 'Research' },
-  { href: '#contact', label: 'Contact' },
+  { href: `${base}/education`, label: 'Education' },
+  { href: `${base}/experience`, label: 'Experience' },
+  { href: `${base}/skills`, label: 'Skills' },
+  { href: `${base}/research`, label: 'Research' },
+  { href: 'tel:+919387975760', label: 'Contact' },
 ];
 ---
 <!doctype html>
@@ -24,57 +23,36 @@ const nav = [
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div class="grid-bg"></div>
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
+    <div class="bg-photo" style={`background-image:url('${base}/bg.png')`}></div>
+    <div class="bg-overlay"></div>
 
-    <!-- Navbar -->
-    <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="mt-4 flex items-center justify-between rounded-2xl border border-[#1b2940] bg-[#0b1220]/70 backdrop-blur-md px-5 py-3">
-          <a href="#top" class="flex items-center gap-2.5 group">
-            <span class="grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br from-[#22d3ee] to-[#2dd4bf] text-[#04212b] font-bold" style="font-family:'Space Grotesk'">AK</span>
-            <span class="hidden sm:block leading-tight">
-              <span class="block text-sm font-semibold text-[#e6edf6]">Amlan Kashyap</span>
-              <span class="block text-[11px] text-[#8da2bd]">Electrical Project Manager</span>
-            </span>
+    <header>
+      <div class="wrap">
+        <div class="nav glass">
+          <a class="brand" href={`${base}/`}>
+            <span class="logo">AK</span>
+            <span><b>Amlan Kashyap</b><small>Electrical Project Engineer</small></span>
           </a>
-          <nav class="hidden md:flex items-center gap-7">
-            {nav.map((n) => <a class="nav-link" href={n.href}>{n.label}</a>)}
+          <nav class="links">
+            {nav.map((n) => <a href={n.href}>{n.label}</a>)}
           </nav>
-          <a href="tel:+919387975760" class="btn btn-primary !py-2.5 !px-4 text-sm">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <span class="hidden sm:inline">Call</span>
-          </a>
+          <a class="btn btn-primary" href={`${base}/Amlan_Kashyap_CV.pdf`} download>⬇ Download CV</a>
         </div>
       </div>
     </header>
 
-    <main id="top">
+    <main>
       <slot />
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-[#1b2940] mt-24">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-[#8da2bd]">© <span id="yr"></span> Amlan Kashyap · Electrical Project Manager · Guwahati, Assam</p>
-        <a href="tel:+919387975760" class="text-sm text-[#8da2bd] hover:text-[#22d3ee] transition">+91 93879 75760</a>
+    <footer>
+      <div class="wrap foot">
+        <span>© <span id="yr"></span> Amlan Kashyap · Electrical Project Engineer · Guwahati, Assam</span>
+        <a href="tel:+919387975760">+91 93879 75760</a>
       </div>
     </footer>
 
     <script is:inline>
-      // scroll reveal
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
-
-      // navbar shadow on scroll
-      const nav = document.getElementById('nav');
-      const onScroll = () => { nav.style.transform = window.scrollY > 20 ? 'translateY(-2px)' : 'none'; };
-      window.addEventListener('scroll', onScroll);
-
-      // year
       const yr = document.getElementById('yr');
       if (yr) yr.textContent = new Date().getFullYear();
     </script>
